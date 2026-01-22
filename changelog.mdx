@@ -1,0 +1,121 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Yellow DirkShark, including new features and bug fixes.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Enhanced model builder with drag-and-drop piece placement from your LEGO collection.
+- Share projects publicly or privately with customizable permissions.
+- Integrated 3D preview for custom models before building.
+
+## Improvements
+
+- Faster loading of user-generated instructions using optimized caching.
+
+## Bug Fixes
+
+- Fixed sharing functionality that prevented exports for models over `>500` pieces.
+- Resolved authentication errors during collaborative editing sessions.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Advanced search filters for LEGO pieces by color, category, and year.
+- Bulk import from Rebrickable MOCs directly into your collection.
+
+## Improvements
+
+- Model building interface now supports undo/redo up to 50 actions.
+- Key enhancements in rendering performance for large inventories.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core platform launch with collection inventory management.
+- Browse and build from thousands of user-submitted LEGO designs.
+- Downloadable PDF instructions for verified projects.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/` paths. Migrate using the guide below.
+
+```javascript
+// Old endpoint (deprecated)
+fetch('https://api.example.com/v0/models');
+
+// New endpoint
+fetch('https://api.example.com/v1/models');
+```
+
+</Update>
+
+## Version Summary
+
+| Version | Release Date | Key Tags          | Highlights                          |
+|---------|--------------|-------------------|-------------------------------------|
+| v1.2.0  | 2024-10-15  | feature, bugfix   | Model builder enhancements, sharing fixes |
+| v1.1.0  | 2024-09-20  | feature, improvement | Search filters, performance boosts |
+| v1.0.0  | 2024-08-10  | feature, breaking | Initial release, API updates       |
+
+## Upgrading to the Latest Version
+
+<Steps>
+  <Step title="Check Current Version" icon="check-circle">
+
+    Visit your dashboard at `https://dashboard.example.com/account` to view installed version.
+
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+
+    Scan the updates above for breaking changes, especially API paths.
+
+  </Step>
+  <Step title="Update Client SDK" icon="download">
+
+    <CodeGroup tabs="npm,yarn">
+    ````bash
+    npm install yellow-dirshark-sdk@latest
+    ````
+    ````bash
+    yarn add yellow-dirshark-sdk@latest
+    ````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Test Models" icon="play-circle">
+
+    Rebuild a sample project to verify piece compatibility.
+
+  </Step>
+</Steps>
+
+## Upcoming Features
+
+<Callout kind="info">
+
+Preview: Real-time multiplayer building sessions and AR previews for mobile. Track progress in your notifications at `https://dashboard.example.com/notifications`.
+
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get building in under 5 minutes.
+  </Card>
+  <Card title="Model Builder Guide" icon="tool" href="/guides/model-builder">
+    Master advanced techniques.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference">
+    Integrate with your apps.
+  </Card>
+</Columns>
